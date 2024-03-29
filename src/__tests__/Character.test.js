@@ -32,3 +32,18 @@ test('testing function levelUp for throw new Error', () => {
   }
 });
 
+test('testing function damage if health = 0', () => {
+  const character = new Character('Jason', 'Bowman');
+  character.defence = 25;
+  character.health = 0;
+  character.damage(10);
+  expect(character.health).toBe(0);
+});
+
+test('testing function damage', () => {
+  const character = new Character('Jason', 'Bowman');
+  character.defence = 25;
+  character.damage(10);
+  expect(character.health).toBe(92.5);
+});
+

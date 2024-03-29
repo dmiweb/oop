@@ -14,16 +14,3 @@ test('testing create object class Daemon', () => {
 
   expect(testObject).toEqual(daemon);
 });
-
-test('testing function damage if health = 0', () => {
-  const daemon = new Daemon('Jason', 'Daemon');
-  daemon.health = 0;
-  daemon.damage(10);
-  expect(daemon.health).toBe(0);
-});
-
-test('testing function damage', () => {
-  const daemon = new Daemon('Jason', 'Daemon');
-  daemon.damage(10);
-  expect(daemon.health).toBe(94);
-});

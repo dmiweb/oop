@@ -14,16 +14,3 @@ test('testing create object class Zombie', () => {
 
   expect(testObject).toEqual(zombie);
 });
-
-test('testing function damage if health = 0', () => {
-  const zombie = new Zombie('Jason', 'Zombie');
-  zombie.health = 0;
-  zombie.damage(10);
-  expect(zombie.health).toBe(0);
-});
-
-test('testing function damage', () => {
-  const zombie = new Zombie('Jason', 'Zombie');
-  zombie.damage(10);
-  expect(zombie.health).toBe(91);
-});
